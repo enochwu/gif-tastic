@@ -75,5 +75,6 @@ $(document).ready(function() {
 
 });
 
-//Ask Mark about filtering PG. Can we filter out via ratings?
-//Mebe some novelty fonts for some added fun.
+// Ask Mark about filtering PG. Can we filter out via ratings?
+// Mebe some novelty fonts for some added fun.
+// Change the look of the generated buttons
