@@ -1,19 +1,36 @@
 $(document).ready(function() {
 
+var createdButtons = [];
+
   $("#mkBtn").on("click", function() {
+
 
     var genBtn = $('<button />');
     var inputTxt = $('#animalText').val().trim();
+    var animalCheck = createdButtons.indexOf(inputTxt);
 
     if (inputTxt == "") {
       alert('Please enter the name of an animal.');
-    } else {
+    }
+
+    if (animalCheck == -1) {
+      console.log(animalCheck);
       genBtn.addClass('btn btn-default animalBtn')
       genBtn.attr('data-name', inputTxt);
       genBtn.text(inputTxt.toUpperCase());
+      createdButtons.push(inputTxt.toLowerCase());
+      console.log(inputTxt);
+      console.log(createdButtons);
       $('#btnSpace').append(genBtn);
       $('#animalText').val('');
+    } else {
+      alert('You\'ve already made a button for this animal.');
+      $('#animalText').val('');
     }
+
+    // if () {
+    //
+    // }
 
   });
 
