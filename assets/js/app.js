@@ -7,7 +7,8 @@ var createdButtons = [];
 
     var genBtn = $('<button />');
     var inputTxt = $('#animalText').val().trim();
-    var animalCheck = createdButtons.indexOf(inputTxt);
+    var animalLowerCase = inputTxt.toLowerCase();
+    var animalCheck = createdButtons.indexOf(animalLowerCase);
 
     if (inputTxt == "") {
       alert('Please enter the name of an animal.');
